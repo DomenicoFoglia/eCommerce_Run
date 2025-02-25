@@ -1,0 +1,316 @@
+:root{
+    --color-p: rgb(254, 185, 20);
+    --color-s: #2e2d2d;
+    --color-t: rgb(248, 240, 220);
+    --color-q: rgb(212, 77, 92);
+}
+.color-p{
+    color: var(--color-p);
+}
+
+.color-s{
+    color: var(--color-s);
+}
+
+.color-t{
+    color: var(--color-t);
+}
+.color-q{
+    color: var(--color-q);
+}
+.text-custom{
+    color: var(--color-q);
+}
+.bg-p{
+    background-color: var(--color-p);
+}
+
+.bg-s{
+    background-color: var(--color-s);
+}
+
+.bg-t{
+    background-color: var(--color-t);
+}
+.bg-q{
+    background-color: var(--color-q);
+}
+* {
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.title{
+    font-family: "Fredoka", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.font-terziario{
+    font-family: "Gloria Hallelujah", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.transition{
+    transition: .5s;
+}
+
+.background-body {
+    z-index: -1;
+    background: linear-gradient(rgba(254, 185, 20, 0.5), rgba(254, 185, 20, 1));
+    /* background: linear-gradient(var(--color-s), var(--color-p)); */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.light-mode{
+    background-color: var(--color-t);
+    color: var(--s);
+    transition: all 0.5s;
+}
+
+
+/* NAVBAR */
+
+/* Logo */
+.logo{
+    width: 25%;
+    transition: width 0.3s ease-in-out;
+}
+/* Coloro il tasto home */
+.nav-link.active.color-p {
+    color: var(--color-p);
+    /* letter-spacing: -5px; */
+}
+.nav-link{
+    text-wrap: nowrap;
+}
+.navbar-brand i {
+    margin-right: 10px; /* Distanza tra il logo e il testo */
+}
+
+.nav-link:hover {
+    color: var(--color-t);
+}
+.navbar-brand:hover{
+    color: var(--color-t);
+}
+.nav-link.active.color-p:hover {
+    color: var(--color-t);
+}
+/* Bottone Login */
+.btnCustom{
+    box-shadow: inset 0px -2px 11px 0px var(--color-q);
+    background-color: var(--color-p);
+    border-radius: 10%;
+    padding:7px 15px;
+    margin-left: 2px;
+    z-index: 2;
+}
+.btnCustom:hover{
+    box-shadow: inset 0px -2px 11px 0px var(--color-t);
+    background-color: var(--color-p);
+}
+.nav-scrolled .btnCustom{
+    visibility: hidden;
+}
+/* Barra di ricerca che appare con lo scroll */
+/* Stile della barra di ricerca */
+.search-bar {
+    visibility: hidden;
+    z-index: 2;
+}
+
+.nav-scrolled .search-bar {
+    opacity: 1;
+    visibility: visible;
+    padding-right: 50px;
+}
+
+.d-none {
+    display: none;
+}
+
+
+
+/* Icone social */
+.iconeSocialCustom{
+    list-style: none;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: flex-direction 0.3s ease-in-out;
+}
+.iconeSocialCustom a:hover {
+    color: var(--color-t); 
+}
+
+.nav-scrolled{
+    /* animation: fade-down 1s; */
+    padding: 0 !important;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--color-t);
+}
+.nav-scrolled .iconeSocialCustom {
+    /* visibility:hidden; */
+    flex-direction: row;
+    padding: 2px; 
+}
+.nav-scrolled .iconeSocialCustom .nav-link{
+    margin-right: 15px;
+}
+.nav-scrolled .logo{
+    width: 15%;
+}
+
+
+@keyframes fade-down{
+    0%{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* DARK MODE */
+/* in questo modo (fixed) il pulsante ci seguira' nell oscroll */
+.darkModeBtn{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}
+
+/* HEADER */
+.head{
+    height: 50vh;
+    border-radius: 20px; 
+    text-align: center;
+    position: relative;
+    background-image: url(../Media/card-image5.jpg);
+    background-size: cover; 
+    
+}
+.box-header{
+    border: 2px solid var(--color-q);
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px var(--color-q);
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.opaco{
+    background-color: hsla(0,0%,100%, 0.2);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+}
+
+/* Sezione coupon */
+.coupon{
+    height: 15vh;
+    width: 50vw;;
+    border-radius: 20px; 
+    text-align: center;
+    position: relative;
+}
+
+.testo-sfocato-coupon{
+    right: 0;
+    bottom: -42px;
+    font-family: title;
+    font-size: 5.8em;
+    color: var(--color-q);
+    z-index: 1;
+    position: absolute;
+    filter: blur(3px);
+}
+
+/* CARD SWIPER  */
+.swiper {
+    width: 100%;
+    height: 300px;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.375rem;
+    position: relative;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-slide::after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(rgba(58, 40, 40, 0.648),transparent) ;
+    border-radius: 0.375rem;
+    z-index: 2;
+}
+
+.positioning{
+    position: absolute;
+    top: 10px;
+    left: -15px;
+    z-index: 3;
+}
+
+.swiper-button-next, .swiper-button-prev{
+    background-color: var(--color-p);
+    border: 2px solid var(--color-t);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    color: var(--color-t);
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+    font-size: 20px;
+}
+
+/* ANNUNCI */
+
+
+
+
+
+
+
+
+/* MEDIAQUERY */
+
+@media (max-width: 768px) {
+    /* Per schermi piccoli */
+    .iconeSocialCustom {
+        position: static;
+        justify-content: center; 
+        margin-bottom: 10px; 
+    }
+    
+}
+@media screen and (max-width:768px){
+    .head{
+        border-radius: 0px;
+    }
+    .testo-sfocato-coupon{
+        display: none;
+    }
+}
