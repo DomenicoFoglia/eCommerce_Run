@@ -14,7 +14,7 @@
 //!STEP 3: .then() -> attraverso una call back, di prendere come paramentro l'oggetto ricavato e manipolato
 
 
-fetch('../annunci2.json')//STEP 1 chiediamo i dati al json (request)
+fetch('annunci2.json')//STEP 1 chiediamo i dati al json (request)
 .then( (response)=> response.json()  )//STEP 2 trasformiamo la stringa in oggetto col metodo .json() (PROMISE trasformata in RESPONSE)
 .then((data)=>{//STEP 3 manipoliamo i dati ricavati
     console.log(data);
@@ -124,7 +124,7 @@ fetch('../annunci2.json')//STEP 1 chiediamo i dati al json (request)
             //riempiamo con le card
             div.innerHTML=`
                 <div class="card" style="width: 100%;">
-                    <img src="../media/card-image2.jpg" class="card-img-top" alt="...">
+                    <img src="media/card-image2.jpg" class="card-img-top" alt="...">
                     <div class="card-body bg-t">
                         <h5 class="card-title">${annuncio.product_name}</h5>
                         <p class="card-text">${annuncio.brand}</p>
