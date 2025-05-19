@@ -4,3 +4,4 @@ Tecnologie utilizzate:
 -CSS
 -BOOTSTRAP
 -JAVASCRIPT
+-TYPESCRIPT
